@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "quickindex"
+version = "0.0.7"
+authors = [
+  { name="David Bernadett", email="djbernadett@gmail.com" },
+]
+description = "An easy way to re-index json lists in python"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dbernadett/easy-index"
+"Bug Tracker" = "https://github.com/dbernadett/easy-index/issues"
