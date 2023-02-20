@@ -63,7 +63,7 @@ class FlatIndex():
             else:
                 only_a[key] = value
         for key, value in dict_b.items():
-            if key in dict_b:
+            if key in dict_a:
                 continue
             only_b[key] = value
         return only_a, common, only_b
