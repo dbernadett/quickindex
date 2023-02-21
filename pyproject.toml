@@ -4,11 +4,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "quickindex"
-version = "1.0.1"
+version = "1.1.0"
 authors = [
   { name="David Bernadett", email="djbernadett@gmail.com" },
 ]
-description = "An easy way to re-index json lists in python"
+description = "An easy way to index lists in python"
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
@@ -18,5 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/dbernadett/easy-index"
-"Bug Tracker" = "https://github.com/dbernadett/easy-index/issues"
+"Homepage" = "https://github.com/dbernadett/quickindex"
+"Bug Tracker" = "https://github.com/dbernadett/quickindex/issues"
