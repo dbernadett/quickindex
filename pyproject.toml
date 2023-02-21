@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "quickindex"
-version = "0.0.7"
+version = "1.0.1"
 authors = [
   { name="David Bernadett", email="djbernadett@gmail.com" },
 ]
