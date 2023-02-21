@@ -1,5 +1,7 @@
 # quickindex
 A simple way to re-index json data in python
+
+![example workflow](https://github.com/dbernadett/quickindex/actions/workflows/python-package.yml/badge.svg)
 ## Example Usage
 ### Input
 ```
