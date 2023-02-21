@@ -1,5 +1,6 @@
 import copy
 
+
 def _add_recursive(path, dict, values):
     index = path[0]
     # base_case
@@ -16,11 +17,11 @@ def _add_recursive(path, dict, values):
 
 def _flatten_dict_helper(dictionary, path):
     for key, value in dictionary.items():
-        if type(key) == tuple:
+        if isinstance(key, tuple):
             current_path = path + key
         else:
             current_path = path + (key,)
-        if type(value) == dict:
+        if isinstance(value, dict):
             yield from _flatten_dict_helper(value, current_path)
         else:
             yield (current_path, value)
@@ -28,6 +29,7 @@ def _flatten_dict_helper(dictionary, path):
 
 class FlatIndex():
     '''A dictionary, where they keys are tuples and values are lists'''
+
     def __init__(self, index_map_function, value_map_function=lambda x: x):
         self._index_map_function = index_map_function
         self._value_map_function = value_map_function
@@ -77,7 +79,7 @@ class FlatIndex():
 
     def items(self):
         return self._index.items()
-    
+
     def as_dict(self):
         return copy.copy(self._index)
 
@@ -93,6 +95,7 @@ class FlatIndex():
 
 class TreeIndex():
     '''A tree, where nodes are dictionaries and leaves are lists'''
+
     def __init__(self, path_map_function, value_map_function=lambda x: x):
         self._path_map_function = path_map_function
         self._value_map_function = value_map_function
