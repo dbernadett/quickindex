@@ -96,7 +96,7 @@ class TestFlatIndex(unittest.TestCase):
         }
         self.assertEqual(age_index._index, target_index)
 
-    def test_2_level_index(self):
+    def test_diff_index(self):
         modified_list = data_list[1:]
         modified_list.append(
             {"first_name": "Phillip", "age": 32, "last_name": "Fry"})
