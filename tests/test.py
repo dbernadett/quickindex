@@ -1,8 +1,12 @@
 import unittest
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from src.quickindex.quickindex import TreeIndex, FlatIndex
+
+if os.environ.get('TEST_IMPORT_PIP', "") == "true":
+    from quickindex import TreeIndex, FlatIndex
+else:
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+    from src.quickindex.quickindex import TreeIndex, FlatIndex
 
 data_list = [
             {
