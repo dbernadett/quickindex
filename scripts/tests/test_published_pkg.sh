@@ -5,6 +5,8 @@ deactivate 2> /dev/null
 rm -rf publish_env
 python3 -m venv publish_env
 source publish_env/bin/activate
-pip install -i https://test.pypi.org/simple/ quickindex==1.1.0
+pip install tomli
 ROOT_DIR=$(git rev-parse --show-toplevel)
+VERSION=$(python3 "$SCRIPT_DIR/parse_pyproject.py" "$ROOT_DIR/pyproject.toml")
+pip install -i https://test.pypi.org/simple/ "quickindex==$VERSION"
 TEST_IMPORT_PIP=true python3 "$ROOT_DIR/tests/test.py"
