@@ -1,3 +1,5 @@
+import copy
+
 def _add_recursive(path, dict, values):
     index = path[0]
     # base_case
@@ -75,6 +77,9 @@ class FlatIndex():
 
     def items(self):
         return self._index.items()
+    
+    def as_dict(self):
+        return copy.copy(self._index)
 
     def __getitem__(self, index):
         return self._index[index]
@@ -116,6 +121,9 @@ class TreeIndex():
     def flatten(self):
         items = [bin for bin in _flatten_dict_helper(self._index, ())]
         return dict(items)
+
+    def as_dict(self):
+        return copy.copy(self._index)
 
     def items(self):
         return self._index.items()
