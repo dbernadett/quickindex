@@ -1,5 +1,5 @@
 # quickindex
-A simple way to re-index json data in python
+A simple way to index lists in python
 
 ![Flake8-&-Build](https://github.com/dbernadett/quickindex/actions/workflows/flake8-and-test.yml/badge.svg)
 ## Example Usage
