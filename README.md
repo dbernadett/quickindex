@@ -1,7 +1,7 @@
 # quickindex
 A simple way to re-index json data in python
 
-![Flake8 & Build](https://github.com/dbernadett/quickindex/actions/workflows/python-package.yml/badge.svg)
+![Flake8-&-Build](https://github.com/dbernadett/quickindex/actions/workflows/python-package.yml/badge.svg)
 ## Example Usage
 ### Input
 ```
