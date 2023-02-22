@@ -4,7 +4,7 @@ A simple way to index lists in python
 ![Flake8-&-Build](https://github.com/dbernadett/quickindex/actions/workflows/flake8-and-test.yml/badge.svg)
 ## Example Usage
 ### Input
-```
+```python
 from quickindex import TreeIndex
 data_list = [
     {
@@ -33,7 +33,7 @@ age_index.add_list(data_list)
 print(age_index.as_dict())
 ```
 ### Output
-```
+```python
 {
     25: {
         'Emmy': ['Davina'], 
@@ -48,7 +48,7 @@ print(age_index.as_dict())
 }
 ```
 ### Input
-```
+```python
 from quickindex import FlatIndex
 data_list = [
     {
@@ -77,7 +77,7 @@ age_index.add_list(data_list)
 print(age_index.as_dict())
 ```
 ### Output
-```
+```python
 {
     (25, 'Emmy'): ['Davina'], 
     (25, 'Busch'): ['Kondwani'], 
