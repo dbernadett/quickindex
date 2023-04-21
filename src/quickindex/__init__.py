@@ -1,1 +1,2 @@
-from .quickindex import FlatIndex, TreeIndex  # noqa: F401
+from .quickindex import FlatIndex  # noqa: F401
+from .quickindex import TreeIndex  # noqa: F401

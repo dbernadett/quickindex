@@ -36,12 +36,12 @@ print(age_index.as_dict())
 ```
 {
     25: {
-        'Emmy': ['Davina'], 
+        'Emmy': ['Davina'],
         'Busch': ['Kondwani']
-    }, 
+    },
     32: {
         'Shannon': ['Betty']
-    }, 
+    },
     38: {
         'Shannon': ['Claude']
     }
@@ -79,9 +79,9 @@ print(age_index.as_dict())
 ### Output
 ```
 {
-    (25, 'Emmy'): ['Davina'], 
-    (25, 'Busch'): ['Kondwani'], 
-    (32, 'Shannon'): ['Betty'], 
+    (25, 'Emmy'): ['Davina'],
+    (25, 'Busch'): ['Kondwani'],
+    (32, 'Shannon'): ['Betty'],
     (38, 'Shannon'): ['Claude']
 }
 ```
