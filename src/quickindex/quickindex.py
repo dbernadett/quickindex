@@ -27,8 +27,8 @@ def _flatten_dict_helper(dictionary, path):
             yield (current_path, value)
 
 
-class FlatIndex():
-    '''A dictionary, where they keys are tuples and values are lists'''
+class FlatIndex:
+    """A dictionary, where they keys are tuples and values are lists"""
 
     def __init__(self, index_map_function, value_map_function=lambda x: x):
         self._index_map_function = index_map_function
@@ -49,6 +49,7 @@ class FlatIndex():
     def to_tree_index(self, index_to_path_function):
         def item_to_path(item):
             return index_to_path_function(self._index_map_function(item))
+
         result = TreeIndex(item_to_path, self._value_map_function)
         for index, values in self._index.items():
             path = index_to_path_function(index)
@@ -93,8 +94,8 @@ class FlatIndex():
         del self._index[index]
 
 
-class TreeIndex():
-    '''A tree, where nodes are dictionaries and leaves are lists'''
+class TreeIndex:
+    """A tree, where nodes are dictionaries and leaves are lists"""
 
     def __init__(self, path_map_function, value_map_function=lambda x: x):
         self._path_map_function = path_map_function
